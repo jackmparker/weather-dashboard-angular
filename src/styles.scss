@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/css/bootstrap/bootstrap.min.css';
+@import './assets/css/fontawesome/css/all.css';
+
+html, body {
+  height: 100%;
+}
+
+.wrap {
+  min-height: 100%;
+}
+
+.main {
+  overflow:auto;
+  padding-bottom:74px;
+}
+
+.footer {
+  position: relative;
+  margin-top: -74px;
+  height: 74px;
+  clear:both;
+  padding-top:20px;
+}

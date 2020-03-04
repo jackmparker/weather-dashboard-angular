@@ -1,0 +1,27 @@
+<h4 class="pb-3">SAVED LOCATIONS</h4>
+<div class="card my-2" *ngFor="let location of savedLocations; let index = index">
+  <div class="card-body">
+    <div class="card-content-left">
+      <h5 class="card-title">
+        {{ location.city }}
+      </h5>
+      <div class="mb-4">
+        <small class="text-muted">
+          {{ location.administrativeArea }},
+          {{ location.country }}
+        </small>
+      </div>
+      <div class="custom-control custom-switch">
+        <input type="checkbox"
+                class="custom-control-input"
+                id="customSwitch{{index}}"
+                [attr.checked]="location.forecast ? true : null"
+                (change)="onShowForecastClicked($event.target.checked, location)">
+        <label class="custom-control-label text-muted" for="customSwitch{{index}}"><small>show forecast</small></label>
+      </div>
+    </div>
+    <button type="button" class="btn btn-outline-danger" (click)="onDeleteLocation.emit(location)">
+      <i class="fas fa-trash"></i>
+    </button>
+  </div>
+</div>

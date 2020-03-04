@@ -1,0 +1,16 @@
+:host {
+
+  .card-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .card-title {
+      margin-bottom: 0;
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #3bb4d8;
+  }
+}

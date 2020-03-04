@@ -1,0 +1,25 @@
+<h4 class="pb-3">ADD LOCATION</h4>
+<div class="input-group">
+  <input type="text"
+          class="form-control"
+          placeholder="Enter location"
+          id="inputDefault"
+          [(ngModel)]="searchText"
+          (ngModelChange)="onSearchTextChange($event)">
+  <i class="fas fa-times" *ngIf="searchText" (click)="clearSearchResults()"></i>
+</div>
+<ul class="list-group pt-1" *ngIf="searchResults.length">
+  <li class="list-group-item d-flex justify-content-between align-items-center"
+      *ngFor="let location of searchResults"
+      (click)="saveLocation(location)">
+    {{ location.LocalizedName }},
+    {{ location.AdministrativeArea.LocalizedName }},
+    {{ location.Country.LocalizedName }}
+    <i class="fas fa-plus-circle"></i>
+  </li>
+</ul>
+<ul class="list-group pt-1" *ngIf="!searchResults.length && searching">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    No Results
+  </li>
+</ul>

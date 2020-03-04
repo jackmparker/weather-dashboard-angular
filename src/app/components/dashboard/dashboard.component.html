@@ -1,0 +1,9 @@
+<div class="container my-5">
+  <div class="card-columns" *ngIf="currentConditions && forecastData">
+    <card *ngFor="let location of savedLocations; let index = index"
+          [location]="location"
+          [conditions]="currentConditions[index][0]"
+          [forecast]="forecastData[index]">
+    </card>
+  </div>
+</div>

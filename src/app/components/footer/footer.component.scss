@@ -1,0 +1,19 @@
+:host {
+  padding: 25px 0;
+    
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    p {
+      margin: 0;
+    }
+
+    img {
+      display: inline-block;
+      width: 150px;
+      margin: 0 5px;
+    }
+  }
+}
