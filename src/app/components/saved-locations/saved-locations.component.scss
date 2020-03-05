@@ -1,5 +1,17 @@
 :host {
 
+  .no-saved-locations {
+
+    .card-body {
+
+      p {
+        text-align: center;
+        width: 100%;
+        margin: 15px 0;
+      }
+    }
+  }
+
   .card-body {
     display: flex;
     align-items: center;

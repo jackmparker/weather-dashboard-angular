@@ -1,6 +1,10 @@
 <div class="container my-5">
-  <div class="card-columns" *ngIf="currentConditions && forecastData">
+  <div class="no-saved-locations" *ngIf="!savedLocations.length">
+    <p>No locations have been selected yet. Click "Manage Locations" above to get started.</p>
+  </div>
+  <div *ngIf="currentConditions && forecastData">
     <card *ngFor="let location of savedLocations; let index = index"
+          class="weather-card"
           [location]="location"
           [conditions]="currentConditions[index][0]"
           [forecast]="forecastData[index]">

@@ -1,4 +1,9 @@
 <h4 class="pb-3">SAVED LOCATIONS</h4>
+<div class="no-saved-locations card my-2" *ngIf="!savedLocations.length">
+  <div class="card-body">
+    <p>Saved locations will appear here once selected</p>
+  </div>
+</div>
 <div class="card my-2" *ngFor="let location of savedLocations; let index = index">
   <div class="card-body">
     <div class="card-content-left">

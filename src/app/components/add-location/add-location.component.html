@@ -4,6 +4,7 @@
           class="form-control"
           placeholder="Enter location"
           id="inputDefault"
+          autocomplete="off"
           [(ngModel)]="searchText"
           (ngModelChange)="onSearchTextChange($event)">
   <i class="fas fa-times" *ngIf="searchText" (click)="clearSearchResults()"></i>
