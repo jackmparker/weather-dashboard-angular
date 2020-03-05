@@ -15,7 +15,7 @@ export class DashboardComponent implements OnInit {
   forecastData: twelveHourForecast[][];
 
   constructor(private locationSearchService: LocationSearchService) {
-    this.savedLocations = JSON.parse(localStorage.getItem('wd'));
+    this.savedLocations = JSON.parse(localStorage.getItem('wd')) || [];
   }
 
   ngOnInit(): void {
