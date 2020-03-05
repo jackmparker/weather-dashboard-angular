@@ -6,7 +6,8 @@ import { ManageLocationsComponent } from './components/manage-locations/manage-l
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
-  { path: 'manage-locations', component: ManageLocationsComponent }
+  { path: 'manage-locations', component: ManageLocationsComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
