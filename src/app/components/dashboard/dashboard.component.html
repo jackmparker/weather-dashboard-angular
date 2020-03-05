@@ -1,5 +1,5 @@
 <div class="container my-5">
-  <div class="no-saved-locations" *ngIf="!savedLocations.length">
+  <div class="no-saved-locations" *ngIf="!savedLocations?.length">
     <p>No locations have been selected yet. Click "Manage Locations" above to get started.</p>
   </div>
   <div *ngIf="currentConditions && forecastData">

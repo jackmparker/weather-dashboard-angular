@@ -9,7 +9,7 @@
           (ngModelChange)="onSearchTextChange($event)">
   <i class="fas fa-times" *ngIf="searchText" (click)="clearSearchResults()"></i>
 </div>
-<ul class="list-group pt-1" *ngIf="searchResults.length">
+<ul class="list-group pt-1" *ngIf="searchResults?.length">
   <li class="list-group-item d-flex justify-content-between align-items-center"
       *ngFor="let location of searchResults"
       (click)="saveLocation(location)">
@@ -19,7 +19,7 @@
     <i class="fas fa-plus-circle"></i>
   </li>
 </ul>
-<ul class="list-group pt-1" *ngIf="!searchResults.length && searching">
+<ul class="list-group pt-1" *ngIf="!searchResults?.length && searching">
   <li class="list-group-item d-flex justify-content-between align-items-center">
     No Results
   </li>

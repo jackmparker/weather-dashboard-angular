@@ -38,8 +38,8 @@ export class AddLocationComponent implements OnInit {
         if(this.searchText) {
           this.locationSearchService.getLocation(this.searchText).subscribe((results: autocompleteResult[]) => {
             this.searchResults = results;
+            this.searching = true;
           });
-          this.searching = true;
         } else {
           this.clearSearchResults();
         }
