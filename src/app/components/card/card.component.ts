@@ -13,6 +13,6 @@ export class CardComponent {
   @Input() forecast: twelveHourForecast;
 
   getWeatherIcon(location: currentConditions|twelveHourForecast): string {
-    return `../../assets/images/weather-icons/${location.WeatherIcon}.png`
+    return `assets/images/weather-icons/${location.WeatherIcon}.png`
   }
 }
