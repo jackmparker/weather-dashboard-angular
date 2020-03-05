@@ -8,10 +8,10 @@ import { savedLocation } from '../../app.models';
 })
 export class ManageLocationsComponent implements OnInit {
   
-  savedLocations: savedLocation[] = [];
+  savedLocations: savedLocation[];
 
   ngOnInit(): void {
-    this.savedLocations = JSON.parse(localStorage.getItem('wd'));
+    this.savedLocations = JSON.parse(localStorage.getItem('wd')) || [];
   }
 
   deleteLocation(location: savedLocation) {
