@@ -12,7 +12,7 @@ export class SavedLocationsComponent {
   @Output() onDeleteLocation: EventEmitter<savedLocation> = new EventEmitter();
 
   onShowForecastClicked(checked: boolean, location: savedLocation) {
-		let storage = JSON.parse(localStorage.getItem('wd'));
+		let storage = JSON.parse(localStorage.getItem('wd')) || [];
 
     storage.forEach((item: savedLocation) => {
       if(item.key === location.key) {
